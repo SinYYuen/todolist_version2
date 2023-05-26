@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/todolist.css" rel="stylesheet">
+
+    <!-- Boot strap via CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <title>addToDoList</title>
+</head>
+
+    <body>
+
+        <div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
+
+
+
+        <div class="container">
+            <h1 class="display-4">New TODO item</h1>
+            <form id="newItemForm" enctype="multipart/form-data">
+                <div class="form-group mb-5">
+                    <label for="newItemTitleInput">Title</label>
+                    <input type="text" class="form-control" id="newItemTitleInput" required>
+                </div>
+
+                <div class="form-group mb-5">
+                    <label for="newItemDescriptionInput">Description</label>
+                    <input type="text" class="form-control" id="newItemDescriptionInput" required>
+                </div>
+
+                <div class="form-group mb-5">
+                    <label for="newItemTargetDateInput">Target Date</label>
+                    <input type="text" class="form-control" id="newItemTargetDateInput" required>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mb-5">Add</button>
+            </form>
+
+
+
+        </div>
+
+            <div th:insert="~{common/footer :: footer}" id="footer"></div>
+
+    </body>
+
+<script src="js/todolistController.js"></script>
+<script src="js/todolist.js"></script>
+<script src="js/addToDoList.js"></script>
+
+
+
+
+</html>
+
+
+
+<!--    <label>Title</label>-->
+<!--    <input type="text" class="form-control" required>-->
+
+<!--    <label>Description</label>-->
+<!--    <input type="text" class="form-control" required>-->
+
+<!--    <label>targetDate</label>-->
+<!--    <input type="date" class="form-control" required>-->
